@@ -1,0 +1,611 @@
+/*====================================
+    JUICY_ART TATTOO PORTFOLIO
+======================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#111;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:white;
+}
+
+section{
+    padding:90px 10%;
+}
+
+h2{
+    text-align:center;
+    font-size:45px;
+    margin-bottom:50px;
+    color:#fff;
+}
+
+/*================ NAVBAR ================*/
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:1000;
+    background:rgba(0,0,0,.55);
+    backdrop-filter:blur(12px);
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 10%;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:700;
+    color:#fff;
+}
+
+.logo span{
+    color:#ff2b55;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:35px;
+}
+
+nav ul li a{
+    font-size:17px;
+    transition:.4s;
+    position:relative;
+}
+
+nav ul li a::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+
+    height:2px;
+
+    left:0;
+
+    bottom:-6px;
+
+    background:#ff2b55;
+
+    transition:.4s;
+
+}
+
+nav ul li a:hover{
+
+    color:#ff2b55;
+
+}
+
+nav ul li a:hover::after{
+
+    width:100%;
+
+}
+
+/*================ HERO ================*/
+
+.hero{
+
+    height:100vh;
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background-image:url("../images/8.jpeg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    transition:1s;
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,.55);
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:700px;
+
+}
+
+.hero-content h1{
+
+    font-size:70px;
+
+    margin-bottom:20px;
+
+    animation:fadeDown 1.5s;
+
+}
+
+.hero-content p{
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+    animation:fadeUp 1.5s;
+
+}
+
+.btn{
+
+    display:inline-block;
+
+    padding:16px 45px;
+
+    border-radius:40px;
+
+    background:#ff2b55;
+
+    color:white;
+
+    font-size:18px;
+
+    transition:.4s;
+
+    font-weight:600;
+
+}
+
+.btn:hover{
+
+    background:white;
+
+    color:#111;
+
+    transform:translateY(-5px);
+
+}
+
+/*================ ABOUT ================*/
+
+#about{
+
+    background:#181818;
+
+}
+
+.about-container{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:60px;
+
+    flex-wrap:wrap;
+
+}
+
+.about-image{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.about-image img{
+
+    width:340px;
+
+    height:340px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:8px solid #ff2b55;
+
+    box-shadow:0 0 40px rgba(255,43,85,.5);
+
+}
+
+.about-text{
+
+    flex:1;
+
+}
+
+.about-text h3{
+
+    font-size:34px;
+
+    margin-bottom:20px;
+
+    color:#ff2b55;
+
+}
+
+.about-text p{
+
+    font-size:18px;
+
+    line-height:2;
+
+    color:#ddd;
+}
+
+/*==============================
+        SERVICES SECTION
+===============================*/
+
+#services{
+    background:#111;
+   
+}
+
+.service-text{
+    text-align:center;
+    max-width:900px;
+    color:#ccc;
+    font-size:18px;
+    line-height:1.5;
+}
+
+
+
+/*==============================
+        OUR WORK SECTION
+===============================*/
+
+#work {
+    background:#111;
+}
+
+.work-text{
+    text-align:center;
+    max-width:900px;
+    color:#ccc;
+    font-size:18px;
+    line-height:1.5;
+}
+
+
+/*========================
+    PROGRESS
+=========================*/
+#pro{
+    background:#111;
+    margin-top: -110px;
+}
+
+.pro{
+    text-align:center;
+    max-width:900px;
+    color:#ccc;
+    font-size:18px;
+    line-height:1.5;
+    margin-top: -30px;
+}
+
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    margin-top:40px;
+}
+
+.gallery div{
+    overflow:hidden;
+    border-radius:15px;
+    background:#1b1b1b;
+    box-shadow:0 8px 20px rgba(0,0,0,.5);
+    transition:.4s;
+}
+
+.gallery img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.gallery div:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(255,43,85,.35);
+}
+
+.gallery div:hover img{
+    transform:scale(1.12);
+}
+
+/*==============================
+        CONTACT SECTION
+===============================*/
+
+#contact{
+    background:#181818;
+    
+}
+
+.contact-box{
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+    background:#202020;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+    margin-top: -50px;
+}
+
+.contact-box p{
+    margin:22px 0;
+    font-size:20px;
+}
+
+.contact-box i{
+    color:#ff2b55;
+    margin-right:12px;
+    font-size:24px;
+}
+
+.contact-box a{
+    color:#fff;
+    transition:.3s;
+}
+
+.contact-box a:hover{
+    color:#ff2b55;
+}
+
+/*==============================
+            FOOTER
+===============================*/
+
+footer{
+    background:#000;
+    text-align:center;
+    padding:50px 10%;
+}
+
+footer h3{
+    font-size:35px;
+    margin-bottom:20px;
+    color:#ff2b55;
+}
+
+.social{
+    margin:25px 0;
+}
+
+.social a{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:50px;
+    height:50px;
+    margin:0 8px;
+    border-radius:50%;
+    background:#222;
+    color:#fff;
+    font-size:22px;
+    transition:.4s;
+}
+
+.social a:hover{
+    background:#ff2b55;
+    transform:translateY(-8px) rotate(360deg);
+}
+
+footer p{
+    color:#bbb;
+    margin-top:20px;
+    font-size:16px;
+}
+
+/*==============================
+        ANIMATIONS
+===============================*/
+
+@keyframes fadeDown{
+
+    from{
+        opacity:0;
+        transform:translateY(-60px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(60px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/*==============================
+        RESPONSIVE
+===============================*/
+
+@media(max-width:992px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        gap:20px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero-content h1{
+        font-size:50px;
+    }
+
+    .hero-content p{
+        font-size:18px;
+    }
+
+    .about-container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:768px){
+
+    section{
+        padding:70px 8%;
+    }
+
+    h2{
+        font-size:36px;
+    }
+
+    .hero-content h1{
+        font-size:40px;
+    }
+
+    .hero-content p{
+        font-size:17px;
+    }
+
+    .about-image img{
+        width:260px;
+        height:260px;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .gallery img{
+        height:260px;
+    }
+
+    .contact-box{
+        padding:30px 20px;
+    }
+
+    .contact-box p{
+        font-size:18px;
+    }
+
+    .social a{
+        width:45px;
+        height:45px;
+        font-size:20px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .logo{
+        font-size:26px;
+    }
+
+    nav ul{
+        gap:15px;
+    }
+
+    nav ul li a{
+        font-size:15px;
+    }
+
+    .hero-content h1{
+        font-size:32px;
+    }
+
+    .hero-content p{
+        font-size:16px;
+    }
+
+    .btn{
+        padding:14px 30px;
+        font-size:16px;
+    }
+
+    h2{
+        font-size:30px;
+    }
+
+}
+
+nav ul li a.active{
+    color:#ff2b55;
+}
+
+nav ul li a.active::after{
+    width:100%;
+}
+
