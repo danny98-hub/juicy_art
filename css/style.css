@@ -184,7 +184,7 @@ nav ul li a:hover::after{
 
     display:inline-block;
 
-    padding:16px 45px;
+    padding:10px 20px;
 
     border-radius:40px;
 
@@ -210,12 +210,42 @@ nav ul li a:hover::after{
 
 }
 
+
+.btn1{
+
+    display:inline-block;
+
+    padding:6px 20px;
+
+    border-radius:40px;
+
+    margin-top: 10px;
+
+    background:#ff2b55;
+
+    color:white;
+
+    font-size:18px;
+
+    transition:.4s;
+
+    font-weight:500;
+
+}
+
+.btn1:hover{
+
+    background:white;
+
+    color:#111;
+
+    transform:translateY(-5px);
+}
+
 /*================ ABOUT ================*/
 
 #about{
-
     background:#181818;
-
 }
 
 .about-container{
@@ -289,8 +319,9 @@ nav ul li a:hover::after{
 
 #services{
     background:#111;
-   
+    
 }
+
 
 .service-text{
     text-align:center;
@@ -298,6 +329,7 @@ nav ul li a:hover::after{
     color:#ccc;
     font-size:18px;
     line-height:1.5;
+    margin-top: -30px;
 }
 
 
@@ -316,6 +348,7 @@ nav ul li a:hover::after{
     color:#ccc;
     font-size:18px;
     line-height:1.5;
+    margin-top: -30px;
 }
 
 
@@ -385,7 +418,7 @@ nav ul li a:hover::after{
     padding:40px;
     border-radius:20px;
     box-shadow:0 10px 30px rgba(0,0,0,.4);
-    margin-top: -50px;
+
 }
 
 .contact-box p{
@@ -406,6 +439,10 @@ nav ul li a:hover::after{
 
 .contact-box a:hover{
     color:#ff2b55;
+}
+
+#map {
+    margin-top: -60px;
 }
 
 /*==============================
