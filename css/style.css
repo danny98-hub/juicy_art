@@ -646,3 +646,507 @@ nav ul li a.active::after{
     width:100%;
 }
 
+
+/*================ JUICY ART NAVBAR ================*/
+
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 42px;
+    height: 42px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.logo span {
+    color: white;
+}
+
+
+/* HAMBURGER */
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* MOBILE NAVBAR */
+
+@media (max-width: 768px) {
+
+    nav {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    nav ul {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 250px;
+
+        display: none;
+        flex-direction: column;
+
+        background: #111;
+
+        padding: 20px;
+
+        gap: 15px;
+
+        border-radius: 0 0 10px 10px;
+
+        z-index: 9999;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+    }
+
+}
+
+
+/*================ SLOW MOVING IMAGE SLIDER ================*/
+
+.moving-images {
+    width: 100%;
+    overflow: hidden;
+    padding: 50px 0;
+}
+
+.moving-images h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.image-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-track {
+    display: flex;
+    width: max-content;
+    gap: 20px;
+
+    animation: moveImages 35s linear infinite;
+}
+
+.image-track img {
+    width: 220px;
+    height: 160px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    flex-shrink: 0;
+}
+
+
+/* SLOW CONTINUOUS MOVEMENT */
+
+@keyframes moveImages {
+
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
+}
+
+/*==================================================
+   JUICY_ART RESPONSIVE NAVBAR
+==================================================*/
+
+/* Prevent the whole page from creating horizontal scrolling */
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+/*================ DESKTOP NAVBAR ================*/
+
+header {
+    width: 100%;
+}
+
+nav {
+    width: 100%;
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 5%;
+
+    box-sizing: border-box;
+}
+
+
+/*================ LOGO ================*/
+
+.logo {
+    flex-shrink: 0;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.logo img {
+    width: 42px;
+    height: 42px;
+
+    object-fit: cover;
+    border-radius: 50%;
+
+    flex-shrink: 0;
+}
+
+.logo a > span {
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+
+/*================ NAVIGATION ================*/
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 25px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+
+/*================ HAMBURGER ================*/
+
+.menu-toggle {
+    display: none;
+
+    font-size: 26px;
+    color: white;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+}
+
+
+/*==================================================
+   MOBILE NAVBAR
+==================================================*/
+
+@media (max-width: 768px) {
+
+    nav {
+        width: 100%;
+
+        min-height: 65px;
+
+        padding: 10px 20px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        box-sizing: border-box;
+    }
+
+
+    /* LOGO */
+
+    .logo {
+        display: flex;
+        align-items: center;
+
+        max-width: calc(100% - 60px);
+
+        flex-shrink: 1;
+    }
+
+    .logo a {
+        display: flex;
+        align-items: center;
+
+        gap: 8px;
+
+        white-space: nowrap;
+    }
+
+    .logo img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .logo a > span {
+        font-size: 19px;
+    }
+
+
+    /* HAMBURGER */
+
+    .menu-toggle {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 42px;
+        height: 42px;
+
+        flex-shrink: 0;
+
+        margin-left: auto;
+    }
+
+
+    /* MOBILE MENU */
+
+    nav ul {
+        position: absolute;
+
+        top: 65px;
+        right: 15px;
+
+        width: 220px;
+        max-width: calc(100vw - 30px);
+
+        display: none;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 10px 0;
+        margin: 0;
+
+        background: #111;
+
+        border-radius: 10px;
+
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+
+        z-index: 9999;
+
+        box-sizing: border-box;
+    }
+
+
+    /* SHOW MENU */
+
+    nav ul.active {
+        display: flex;
+    }
+
+
+    /* MENU ITEMS */
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+
+        width: 100%;
+
+        padding: 13px 20px;
+
+        box-sizing: border-box;
+
+        text-align: center;
+    }
+
+
+    /* HIRE US BUTTON */
+
+    nav ul li:last-child {
+        padding: 5px 15px;
+        box-sizing: border-box;
+    }
+
+    nav ul li:last-child a {
+        width: 100%;
+    }
+
+}
+
+
+/*==================================================
+   SMALL PHONES
+==================================================*/
+
+@media (max-width: 400px) {
+
+    nav {
+        padding: 8px 15px;
+    }
+
+    .logo img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .logo a > span {
+        font-size: 17px;
+    }
+
+    .menu-toggle {
+        width: 38px;
+        height: 38px;
+        font-size: 24px;
+    }
+
+    nav ul {
+        top: 61px;
+        right: 10px;
+
+        width: 210px;
+        max-width: calc(100vw - 20px);
+    }
+
+}
+
+/*================ MENU ICONS ================*/
+
+.menu-toggle {
+    position: relative;
+    display: none;
+}
+
+.menu-open,
+.menu-close {
+    font-size: 26px;
+}
+
+.menu-close {
+    display: none;
+}
+
+
+/* When menu is open */
+
+.menu-toggle.active .menu-open {
+    display: none;
+}
+
+.menu-toggle.active .menu-close {
+    display: block;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 42px;
+        height: 42px;
+
+        color: white;
+        cursor: pointer;
+    }
+
+}
+
+
+/*================ MOBILE MENU ICON ================*/
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 28px;
+    color: white;
+    z-index: 10001;
+}
+
+.menu-toggle .close {
+    display: none;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Hamburger is visible normally */
+    .menu-toggle .hamburger {
+        display: inline;
+    }
+
+    /* X is hidden normally */
+    .menu-toggle .close {
+        display: none;
+    }
+
+    /* When menu is open */
+    .menu-toggle.active .hamburger {
+        display: none;
+    }
+
+    .menu-toggle.active .close {
+        display: inline;
+    }
+
+}
