@@ -178,8 +178,6 @@ galleryImages.forEach(img=>{
 
 //================ MOBILE MENU ================//
 
-//================ MOBILE MENU ================//
-
 const menuToggle = document.getElementById("menu-toggle");
 const navMenu = document.getElementById("nav-menu");
 
