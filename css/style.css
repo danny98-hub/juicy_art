@@ -264,8 +264,6 @@ nav ul li a:hover::after{
 
 .about-image{
 
-    flex:1;
-
     display:flex;
 
     justify-content:center;
@@ -351,6 +349,17 @@ nav ul li a:hover::after{
     margin-top: -30px;
 }
 
+#work h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#work h2 span {
+    text-align: center;
+    margin-bottom: 30px;
+    color:red;
+}
+
 
 /*========================
     PROGRESS
@@ -376,6 +385,7 @@ nav ul li a:hover::after{
     gap:25px;
     margin-top:40px;
 }
+
 
 .gallery div{
     overflow:hidden;
@@ -461,6 +471,9 @@ footer h3{
     color:#ff2b55;
 }
 
+footer h3 span{
+    color:#fff;
+}
 .social{
     margin:25px 0;
 }
@@ -1162,4 +1175,18 @@ nav ul li a {
         display: inline;
     }
 
+}
+
+/* MOBILE MENU */
+
+.close {
+    display: none;
+}
+
+.menu-toggle.active .hamburger {
+    display: none;
+}
+
+.menu-toggle.active .close {
+    display: inline;
 }
